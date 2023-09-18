@@ -1,0 +1,135 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e09999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.registration-container {
+    background-color: #fff;
+    padding: 28px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.registration-container h2 {
+    color: #333;
+}
+
+.registration-form {
+    margin-top: 20px;
+}
+
+.registration-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] 
+.registration-form input[ type="number"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.registration-form button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-container p {
+    margin-top: 10px;
+}
+
+.registration-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.registration-container a:hover {
+    text-decoration: underline;
+}
+
+
+.registration-container p a {
+    color: #007BFF; /* Link text color */
+    text-decoration: none; /* Remove underlines */
+    font-weight: bold; /* Make the link text bold */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.registration-container p a:hover {
+    color: #0056b3; /* Change the link color on hover */
+    text-decoration: underline; /* Add underlines on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Create an Account</h2>
+        <form class="registration-form" id="registration-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" required>
+
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="UI-UX.html">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById("registration-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const Phonenumber = document.getElementById("number").value;
+
+            // Replace this with your actual registration logic
+            // You would typically send this data to a server for processing and database storage
+            console.log("User registered with the following data:");
+            console.log("Username: " + username);
+            console.log("Email: " + email);
+
+            // Redirect to a success page or login page
+            window.location.href = "house desgn.html"; // Adjust the URL as needed
+        });
+    </script>
+</body>
+</html>
